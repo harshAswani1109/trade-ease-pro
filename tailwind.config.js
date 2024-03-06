@@ -12,6 +12,14 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: "#3498db", // Blue for primary actions
+        secondary: "#2ecc71", // Green for success or positive actions
+        danger: "#e74c3c", // Red for danger or errors
+        dark: "#34495e", // Dark background color
+        light: "#ecf0f1", // Light background color
+        text: "#2c3e50", // Dark text color
+      },
     },
   },
   plugins: [],
