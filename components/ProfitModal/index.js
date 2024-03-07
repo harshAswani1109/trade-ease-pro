@@ -8,12 +8,15 @@ const ProfitModal = ({
   stockPrice,
   onClose,
   onInvestMore,
+  symbol,
 }) => {
   const [showMonitorPopup, setShowMonitorPopup] = useState(false);
 
   const handleMonitorClick = () => {
     setShowMonitorPopup(true);
   };
+
+  console.log(symbol);
 
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
@@ -33,7 +36,7 @@ const ProfitModal = ({
         <div className="flex justify-end mt-6">
           <button
             className="bg-indigo-500 text-white py-2 px-4 rounded-md mr-4 hover:bg-indigo-700 focus:outline-none focus:shadow-outline-indigo"
-            onClick={onInvestMore}
+            onClick={onClose}
           >
             Invest More
           </button>
@@ -52,6 +55,7 @@ const ProfitModal = ({
           numberOfShares={numberOfShares}
           stockPrice={stockPrice}
           onClose={() => setShowMonitorPopup(false)}
+          symbol={symbol}
         />
       )}
     </div>

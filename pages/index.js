@@ -54,7 +54,7 @@ const Login = () => {
             id="userId"
             value={userId}
             onChange={(e) => setUserId(e.target.value)}
-            className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-indigo-500 bg-light"
+            className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-indigo-500 bg-light text-black"
             placeholder="Enter your user ID"
             aria-label="User ID"
           />

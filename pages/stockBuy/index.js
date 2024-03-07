@@ -13,11 +13,15 @@ const InvestmentPage = () => {
 
   // Example list of stocks with their prices
   const stockOptions = [
-    { name: "AAPL - Apple Inc.", price: 1500 },
-    { name: "GOOGL - Alphabet Inc.", price: 2800 },
-    { name: "AMZN - Amazon.com Inc.", price: 3300 },
-    { name: "MSFT - Microsoft Corporation", price: 2500 },
-    { name: "TSLA - Tesla Inc.", price: 2000 },
+    { name: "AAPL - Apple Inc.", price: 1500, symbol: "NASDAQ:AAPL" },
+    { name: "GOOGL - Alphabet Inc.", price: 2800, symbol: "NASDAQ:AAPL" },
+    { name: "AMZN - Amazon.com Inc.", price: 3300, symbol: "NASDAQ:AAPL" },
+    {
+      name: "MSFT - Microsoft Corporation",
+      price: 2500,
+      symbol: "NASDAQ:AAPL",
+    },
+    { name: "TSLA - Tesla Inc.", price: 2000, symbol: "NASDAQ:AAP" },
     // Add more stock options as needed
   ];
 
@@ -28,7 +32,13 @@ const InvestmentPage = () => {
     setProfitModalData({
       stockName: formData.selectedStock,
       numberOfShares: formData.numberOfShares,
-      stockPrice: 1500, // Replace with the actual price
+      stockPrice:
+        stockOptions.find((stock) => stock.name === formData.selectedStock)
+          ?.price || 0,
+
+      symbol:
+        stockOptions.find((stock) => stock.name === formData.selectedStock)
+          ?.symbol || "NASDAQ:AAPL",
     });
 
     // Reset the form after submission
@@ -44,7 +54,7 @@ const InvestmentPage = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8 p-8 bg-white shadow-md rounded-md">
+    <div className="h-screen container mx-auto mt-8 p-8 bg-white shadow-md rounded-md">
       <h2 className="text-3xl font-semibold mb-6 text-indigo-800">
         Investment Page
       </h2>
@@ -104,6 +114,7 @@ const InvestmentPage = () => {
           stockName={profitModalData.stockName}
           numberOfShares={profitModalData.numberOfShares}
           stockPrice={profitModalData.stockPrice}
+          symbol={profitModalData.symbol}
           onClose={() => setShowModal(false)}
         />
       )}
