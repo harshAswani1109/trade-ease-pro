@@ -22,6 +22,11 @@ const Navbar = () => {
               Profile
             </Link>
           </li>
+          <li>
+            <Link href="/subscription" className="text-white">
+              Subscription
+            </Link>
+          </li>
         </ul>
         <div className="flex items-center">
           <div className="text-white mr-2">Hi, User</div>
