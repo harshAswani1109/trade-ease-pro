@@ -19,14 +19,14 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/profile" className="text-white">
-              profile
+              Profile
             </Link>
           </li>
         </ul>
         <div className="flex items-center">
           <div className="text-white mr-2">Hi, User</div>
-          <div className="bg-white text-gray-800 rounded-full w-8 h-8 flex items-center justify-center">
-            U
+          <div className="bg-white rounded-full text-gray-800 overflow-hidden w-8 h-8 flex items-center justify-center">
+            <img src="https://bmf-bucket.s3.ap-south-1.amazonaws.com/882_Photo.jpg"></img>
           </div>
         </div>
       </div>
