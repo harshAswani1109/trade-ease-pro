@@ -13,15 +13,15 @@ const InvestmentPage = () => {
 
   // Example list of stocks with their prices
   const stockOptions = [
-    { name: "AAPL - Apple Inc.", price: 1500, symbol: "NASDAQ:AAPL" },
-    { name: "GOOGL - Alphabet Inc.", price: 2800, symbol: "NASDAQ:AAPL" },
-    { name: "AMZN - Amazon.com Inc.", price: 3300, symbol: "NASDAQ:AAPL" },
-    {
-      name: "MSFT - Microsoft Corporation",
-      price: 2500,
-      symbol: "NASDAQ:AAPL",
-    },
-    { name: "TSLA - Tesla Inc.", price: 2000, symbol: "NASDAQ:AAP" },
+    { name: "AAPL - Apple Inc.", price: 13987, symbol: "NASDAQ:AAPL" },
+    { name: "Meta - NASDAQ:META", price: 41056, symbol: "NASDAQ:META" },
+    { name: "Gold - TVC Gold", price: 65263, symbol: "TVC:GOLD" },
+    // {
+    //   name: "MSFT - Microsoft Corporation",
+    //   price: 2500,
+    //   symbol: "NASDAQ:AAPL",
+    // },
+    // { name: "TSLA - Tesla Inc.", price: 2000, symbol: "NASDAQ:AAP" },
     // Add more stock options as needed
   ];
 
